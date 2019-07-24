@@ -1,9 +1,13 @@
 #> Creates scoreboard for multiplayer sleep.
 # Called By: #nuhser_core:init <SERVER>
 
-#create sleep scoreboard
-tellraw @a ["",{"text":"Creating scoreboard for Multiplayer Sleep...","color":"yellow"}]
+tellraw @a ["",{"text":"----------------------------------------"}]
+tellraw @a ["",{"text":"multiplayer_sleep: Loading Multiplayer Sleep...","color":"dark_purple"}]
 
+tellraw @a ["",{"text":"multiplayer_sleep: Creating scoreboard...","color":"yellow"}]
+
+# create sleep scoreboard
 scoreboard objectives add nuhser_sleep dummy
 
-tellraw @a ["",{"text":"Multiplayer Sleep successful initialized!","color":"green"}]
+tellraw @a ["",{"text":"multiplayer_sleep: Loading successful!","color":"green"}]
+tellraw @a ["",{"text":"----------------------------------------"}]
