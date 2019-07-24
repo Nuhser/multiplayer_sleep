@@ -5,7 +5,8 @@
 # removes sleep scoreboard
 tellraw @a ["",{"text":"Removing all scoreboards for Multiplayer Sleep...","color":"yellow"}]
 
-scoreboard objectives remove nuhser_sleep
+scoreboard objectives remove ms_sleep
+scoreboard objectives remove stop_sleeping
 
 tellraw @a ["",{"text":"Multiplayer Sleep successdul uninstalled!","color":"green"}]
 

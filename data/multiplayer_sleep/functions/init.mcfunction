@@ -7,7 +7,10 @@ tellraw @a ["",{"text":"multiplayer_sleep: Loading Multiplayer Sleep...","color"
 tellraw @a ["",{"text":"multiplayer_sleep: Creating scoreboard...","color":"yellow"}]
 
 # create sleep scoreboard
-scoreboard objectives add nuhser_sleep dummy
+scoreboard objectives add ms_sleep dummy
+
+# create stop slepping trigger
+scoreboard objectives add stop_sleeping trigger
 
 tellraw @a ["",{"text":"multiplayer_sleep: Loading successful!","color":"green"}]
 tellraw @a ["",{"text":"----------------------------------------"}]
