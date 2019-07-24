@@ -1,8 +1,5 @@
-#
-# Desc.: Toggles the single player requirement for multiplayer sleep.
-# Called By: player
-# @s: player
-#
+#> Toggles the single player requirement for multiplayer sleep.
+# Called By: player <PLAYER>
 
 #change score from 0 to 1 or from 1 to 0
 scoreboard players operation $single_player_sleep nuhser_sleep -= $1 nuhser_constants

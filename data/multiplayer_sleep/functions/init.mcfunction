@@ -1,8 +1,5 @@
-#
-# Desc.: Creates scoreboard for multiplayer sleep.
-# Called By: #nuhser_core:init
-# @s: <SERVER>
-#
+#> Creates scoreboard for multiplayer sleep.
+# Called By: #nuhser_core:init <SERVER>
 
 #create sleep scoreboard
 tellraw @a ["",{"text":"Creating scoreboard for Multiplayer Sleep...","color":"yellow"}]

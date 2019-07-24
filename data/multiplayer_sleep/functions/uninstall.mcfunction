@@ -1,11 +1,9 @@
-#
-# Desc.: Removes scoreboard for multiplayer_sleep.
-# Called By: #nuhser_core:init
-# @s: <SERVER>
+#> Removes scoreboard for multiplayer_sleep.
+# Called By: #nuhser_core:uninstall <SERVER>
 #
 
 #removes sleep scoreboard
-tellraw @a ["",{"text":"Removing all scoreboards created by Multiplayer Sleep...","color":"yellow"}]
+tellraw @a ["",{"text":"Removing all scoreboards for Multiplayer Sleep...","color":"yellow"}]
 
 scoreboard objectives remove nuhser_sleep
 

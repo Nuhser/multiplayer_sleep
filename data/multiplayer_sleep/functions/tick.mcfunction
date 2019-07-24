@@ -1,8 +1,5 @@
-#
-# Desc.: Let the players sleep the night away if half of them sleep or only one depanding on the configuration.
-# Called By: #nuhser_core:tick
-# @s: <SERVER>
-#
+#> Let the players sleep the night away if half of them sleep or only one depanding on the configuration.
+# Called By: #nuhser_core:tick <SERVER>
 
 #count players online (only survival players in overworld)
 scoreboard players set $players_online nuhser_sleep 0
