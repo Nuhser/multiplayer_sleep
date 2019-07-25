@@ -14,6 +14,11 @@ execute as @a[scores={stop_sleeping=1..}] at @s run schedule function multiplaye
 
 # check if player triggered sleep stop and set $disable_sleeping to True
 execute as @a[scores={stop_sleeping=1..}] at @s run scoreboard players set $disable_sleeping ms_sleep 1
+
+# check if player triggered sleep stop and send mesasage
+execute as @a[scores={stop_sleeping=1..}] at @s run tellraw @a ["", {"selector": "@s", "color": "green"}, {"text": " doesn't want you to sleep for the next 10 minutes.", "color": "yellow"}]
+
+# reset stop_sleeping-trigger
 execute as @a[scores={stop_sleeping=1..}] at @s run scoreboard players reset @s stop_sleeping
 
 # interrupt all sleeping players
