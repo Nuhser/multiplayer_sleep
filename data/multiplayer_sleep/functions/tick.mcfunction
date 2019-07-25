@@ -2,6 +2,10 @@
 # Called By: #nuhser_core:tick <SERVER>
 
 
+# store time the players have slept
+execute as @a store result score @s ms_sleep run data get entity @s SleepTimer
+
+
 # enable trigger for all players
 scoreboard players enable @a stop_sleeping
 
@@ -22,7 +26,7 @@ execute as @a[gamemode=survival,nbt={Dimension:0}] at @s run scoreboard players 
 
 # count players sleeping
 scoreboard players set $sleeping_players ms_sleep 0
-execute as @a[nbt={Sleeping:1b}] at @s run scoreboard players add $sleeping_players ms_sleep 1
+execute as @a[scores={ms_sleep=1..}] at @s run scoreboard players add $sleeping_players ms_sleep 1
 
 # calculate required players
 scoreboard players operation $required_players ms_sleep = $players_online ms_sleep
@@ -43,11 +47,11 @@ execute if score $sleeping_players ms_sleep >= $required_players ms_sleep if sco
 # make notifications
 tag @a[nbt={Sleeping:0b},tag=ms_sleep] remove ms_sleep
 
-execute if score $sleeping_players ms_sleep < $required_players ms_sleep as @a[nbt={Sleeping:1b},tag=!ms_sleep] at @s run tellraw @a ["",{"selector":"@p","color":"yellow"},{"text":" is now sleeping. ","color":"yellow"},{"score":{"name":"$sleeping_players","objective":"ms_sleep"},"color":"red"},{"text":"/","color":"red"},{"score":{"name":"$required_players","objective":"ms_sleep"},"color":"red"}]
+execute if score $sleeping_players ms_sleep < $required_players ms_sleep as @a[scores={ms_sleep=1..},tag=!ms_sleep] at @s run tellraw @a ["",{"selector":"@p","color":"yellow"},{"text":" is now sleeping. ","color":"yellow"},{"score":{"name":"$sleeping_players","objective":"ms_sleep"},"color":"red"},{"text":"/","color":"red"},{"score":{"name":"$required_players","objective":"ms_sleep"},"color":"red"}]
 
-execute if score $sleeping_players ms_sleep >= $required_players ms_sleep as @a[nbt={Sleeping:1b},tag=!ms_sleep] at @s run function multiplayer_sleep:random_message
+execute if score $sleeping_players ms_sleep >= $required_players ms_sleep as @a[scores={ms_sleep=1..},tag=!ms_sleep] at @s run function multiplayer_sleep:random_message
 
-tag @a[nbt={Sleeping:1b},tag=!ms_sleep] add ms_sleep
+tag @a[scores={ms_sleep=1..},tag=!ms_sleep] add ms_sleep
 
 
 # make time go by
