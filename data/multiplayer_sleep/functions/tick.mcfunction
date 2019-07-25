@@ -50,7 +50,7 @@ execute if score $sleeping_players ms_sleep >= $required_players ms_sleep if sco
 
 
 # make notifications
-tag @a[nbt={Sleeping:0b},tag=ms_sleep] remove ms_sleep
+tag @a[scores={ms_sleep=..0},tag=ms_sleep] remove ms_sleep
 
 execute if score $sleeping_players ms_sleep < $required_players ms_sleep as @a[scores={ms_sleep=1..},tag=!ms_sleep] at @s run tellraw @a ["",{"selector":"@p","color":"yellow"},{"text":" is now sleeping. ","color":"yellow"},{"score":{"name":"$sleeping_players","objective":"ms_sleep"},"color":"red"},{"text":"/","color":"red"},{"score":{"name":"$required_players","objective":"ms_sleep"},"color":"red"}]
 
