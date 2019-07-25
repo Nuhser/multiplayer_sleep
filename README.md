@@ -1,4 +1,4 @@
-# multiplayer_sleep (v3.0.0)
+# Multiplayer Sleep
 
 ### by Nuhser
 
