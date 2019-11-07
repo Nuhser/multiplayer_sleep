@@ -61,4 +61,4 @@ tag @a[scores={ms_sleep=1..},tag=!ms_sleep] add ms_sleep
 
 # make time go by
 execute if score $sleeping_players ms_sleep >= $required_players ms_sleep if score $time_slept ms_sleep matches 100.. run time add 100
-execute if score $sleeping_players ms_sleep >= $required_players ms_sleep if score $time_slept ms_sleep matches 200.. run weather clear
+execute if score $sleeping_players ms_sleep >= $required_players ms_sleep if score $time_slept ms_sleep matches 200.. run weather rain 1
