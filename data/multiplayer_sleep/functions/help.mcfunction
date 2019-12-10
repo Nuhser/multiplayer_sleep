@@ -5,7 +5,7 @@
 tellraw @a[scores={help=1}] [{"text":">  "},{"text":"[Multiplayer Sleep]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger help set 9"}}]
 
 # explanation of nuhser mod
-tellraw @a[scores={help=9}] [{"text":"\nMultiplayer Sleep","underlined":true,"color":"dark_aqua"},{"text":" (v3.0.0)\n","underlined":false}]
+tellraw @a[scores={help=9}] [{"text":"\nMultiplayer Sleep","underlined":true,"color":"dark_aqua"},{"text":" (v4.0.0)\n","underlined":false}]
 
 tellraw @a[scores={help=9}] [{"text":"Multiplayer Sleep sets the number of sleeping players required to skip the night to "},{"text":"50%","color":"green"},{"text":" of all players online.", "color":"reset"}]
 
