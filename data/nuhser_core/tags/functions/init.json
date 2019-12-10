@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "multiplayer_sleep:init"
+    "multiplayer_sleep:_init"
   ]
 }
