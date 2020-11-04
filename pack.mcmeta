@@ -1,6 +1,6 @@
 {
 	"pack": {
-		"pack_format": 5,
+		"pack_format": 6,
 		"description": "Sets the required number of sleeping players from all to 50% or just one player. Requires nuhser core to be installed first!"
 	}
 }
