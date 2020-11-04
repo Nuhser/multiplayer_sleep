@@ -26,7 +26,7 @@ execute if score $disable_sleeping ms_sleep matches 1.. run function multiplayer
 
 # count players online (only survival players in overworld)
 scoreboard players set $players_online ms_sleep 0
-execute as @a[gamemode=survival,nbt={Dimension:0}] at @s run scoreboard players add $players_online ms_sleep 1
+execute as @a[gamemode=survival,nbt={Dimension:"minecraft:overworld"}] at @s run scoreboard players add $players_online ms_sleep 1
 
 # count players sleeping
 scoreboard players set $sleeping_players ms_sleep 0
